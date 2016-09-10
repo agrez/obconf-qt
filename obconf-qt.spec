@@ -68,5 +68,5 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
-* Sat Sep 10 2016 Vaughan <devel at agrez dot net> - 0.9.0-1.
+* Sat Sep 10 2016 Vaughan <devel at agrez dot net> - 0.9.0-1.41698c8
 - initial package
