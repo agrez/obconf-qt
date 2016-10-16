@@ -1,15 +1,16 @@
-%global     commit 41698c8e8a49f652d79f32f0f3b4a585560f29ce
+%global     commit 8af9fa5a84d03a77ed001058b18078cc47189a95
 %global     commit_short %(c=%{commit}; echo ${c:0:7})
 
 
 Name:           obconf-qt
-Version:        0.9.0
+Version:        0.11.0
 Release:        1.%{commit_short}%{?dist}
 Summary:        Qt port of ObConf, a configuration editor for window manager OpenBox
 License:        GPLv2+
 URL:            https://github.com/lxde/obconf-qt
 Source0:        https://github.com/lxde/obconf-qt/archive/%{commit}.tar.gz#/%{name}-%{version}-%{commit_short}.tar.gz
 BuildRequires:  cmake
+BuildRequires:  git
 BuildRequires:  qt5-linguist
 BuildRequires:  liblxqt-devel
 BuildRequires:  openbox-devel
@@ -65,8 +66,14 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/*/*
+%dir %{_datadir}/%{name}/translations
+%{_datadir}/%{name}/translations/*.qm
 
 
 %changelog
+* Sun Oct 16 2016 Vaughan <devel at agrez dot net> - 0.11.0-1.8af9fa5
+- New release (git commit 8af9fa5a84d03a77ed001058b18078cc47189a95)
+- Add BuildRequires: git
+
 * Sat Sep 10 2016 Vaughan <devel at agrez dot net> - 0.9.0-1.41698c8
 - initial package
