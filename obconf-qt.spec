@@ -1,9 +1,9 @@
-%global     commit 8af9fa5a84d03a77ed001058b18078cc47189a95
+%global     commit 2ac1f6be7f10ac417ba9cc2a83edf0269b4010ff
 %global     commit_short %(c=%{commit}; echo ${c:0:7})
 
 
 Name:           obconf-qt
-Version:        0.11.0
+Version:        0.11.1
 Release:        1.%{commit_short}%{?dist}
 Summary:        Qt port of ObConf, a configuration editor for window manager OpenBox
 License:        GPLv2+
@@ -71,6 +71,10 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Tue Feb 14 2017 Vaughan <devel at agrez dot net> - 0.11.1-1.2ac1f6b
+- New release
+- Update to git commit: 2ac1f6be7f10ac417ba9cc2a83edf0269b4010ff
+
 * Sun Oct 16 2016 Vaughan <devel at agrez dot net> - 0.11.0-1.8af9fa5
 - New release (git commit 8af9fa5a84d03a77ed001058b18078cc47189a95)
 - Add BuildRequires: git
